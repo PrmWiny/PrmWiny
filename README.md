@@ -127,31 +127,6 @@ A specialized desktop utility for runtime memory analysis, kernel-level interact
 
 <br/>
 
-<!-- 3D contribution calendar (requires GitHub Action — see setup note) -->
-<div align="center">
-  <img src="https://raw.githubusercontent.com/PrmWiny/PrmWiny/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Contribution Calendar" />
-</div>
-
----
-
-## 🏆 System Achievements
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=PrmWiny&theme=radical&no-frame=true&no-bg=true&margin-w=4&column=7" width="100%"/>
-</div>
-
----
-
-## 🐍 Contribution Trace
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PrmWiny/PrmWiny/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PrmWiny/PrmWiny/output/github-contribution-grid-snake.svg" />
-    <img alt="Contribution snake" src="https://raw.githubusercontent.com/PrmWiny/PrmWiny/output/github-contribution-grid-snake-dark.svg" />
-  </picture>
-</div>
-
 ---
 
 ## 📡 Connection Terminal
