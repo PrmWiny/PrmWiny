@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=MARCH&fontSize=80&fontColor=fff&animation=twinkling&fontAlignY=38&desc=Developer%20%2F%2F%20Security%20Engineer&descAlignY=58&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFF9E6,50:FFD700,100:FF5722&height=200&section=header&text=MARCH&fontSize=80&fontColor=fff&animation=twinkling&fontAlignY=38&desc=Developer%20|%20Security%20Engineer&descAlignY=58&descSize=18" width="100%"/>
 
 <a href="https://github.com/PrmWiny">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&repeat=true&width=500&lines=System+Architect+%26+Developer+%F0%9F%9A%80;Security+%26+Low-Level+Engineer+%F0%9F%94%90;Hardware+DMA+%26+Memory+Analyst+%F0%9F%A7%A0;Building+Resilient+Systems+%E2%9A%99%EF%B8%8F" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=FFFFFF&center=true&vCenter=true&repeat=true&width=500&lines=System+Architect+%26+Developer;Security+%26+Low-Level+Engineer+%F0%9F%94%90;Hardware+DMA+%26+Memory+Analyst+%F0%9F%A7%A0;Building+Resilient+Systems+%E2%9A%99%EF%B8%8F" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -100,29 +100,7 @@ A specialized desktop utility for runtime memory analysis, kernel-level interact
 <div align="center">
 
 <!-- Streak — uptime counter -->
-<img src="https://streak-stats.demolab.com/?user=PrmWiny&theme=radical&hide_border=true&background=0D1117&ring=00D9FF&fire=FF6B35&currStreakLabel=00D9FF&sideLabels=00D9FF&dates=888888" width="98%" />
-
-</div>
-
-<br/>
-
-<!-- Summary cards — 5-panel dashboard -->
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PrmWiny&theme=radical" width="98%" />
-</div>
-
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=PrmWiny&theme=radical" width="24%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=PrmWiny&theme=radical" width="24%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=PrmWiny&theme=radical" width="24%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=PrmWiny&theme=radical&utcOffset=7" width="24%" />
-</div>
-
-<br/>
-
-<!-- Activity graph — commit heatmap -->
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=PrmWiny&theme=react-dark&hide_border=true&bg_color=0D1117&color=00D9FF&line=00D9FF&point=FF6B35&area=true&area_color=00D9FF" width="100%"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=prmwiny&background=00000000&ring=FF9100&fire=FF9100&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=FFFFFF&hide_border=true" width="98%" />
 </div>
 
 <br/>
@@ -145,4 +123,4 @@ PORTFOLIO = https://march.dev   # Status: Deploying Soon...
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFF9E6,50:FFD700,100:FF5722&height=200&section=footer" width="100%"/>
