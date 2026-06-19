@@ -133,7 +133,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.about-section { background: var(--bg); }
+.about-section { background: var(--bg); padding-top: 64px; padding-bottom: 72px; }
 .about-bg-orb {
   position: absolute; width: 600px; height: 600px; border-radius: 50%;
   background: radial-gradient(circle, rgba(255,107,26,0.06) 0%, transparent 70%);
@@ -147,7 +147,7 @@ onMounted(() => {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   animation: shimmer-text 6s ease infinite; min-height: 1.2em;
 }
-.section-line { width: 44px; height: 2px; background: var(--gradient-gold); margin: 16px 0 50px; border-radius: 2px; }
+.section-line { width: 44px; height: 2px; background: var(--gradient-gold); margin: 12px 0 32px; border-radius: 2px; }
 
 .blur-reveal { animation: blur-in 1s ease both 0.2s; }
 @keyframes blur-in { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }

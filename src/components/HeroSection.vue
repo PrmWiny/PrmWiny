@@ -202,11 +202,13 @@ function setupScrollAnimation() {
   let savedR = null
   let revWheelHandler = null
   let reversing = false
+  let fwdTl = null
 
-  function runTransition() {
+  function runTransition(scrollTarget = about) {
     if (active) return
     active = true
     document.body.style.overflow = 'hidden'
+    hero.style.overflow = 'visible'   // let border-radius render without being clipped
 
     const term     = terminalEl.value
     const heroKids = Array.from(heroTextEl.value.children)
@@ -229,18 +231,22 @@ function setupScrollAnimation() {
     const cx = (vw - r.width)  / 2
     const cy = (vh - r.height) / 2
 
-    gsap.timeline()
+    fwdTl = gsap.timeline()
       .to(['.hero-canvas', '.hex-grid', '.scan-line', '.hero-glow', '.scroll-indicator'],
         { opacity: 0, duration: 0.25, ease: 'power2.in' }, 0)
       .to(heroKids,
         { opacity: 0, y: -16, stagger: 0.025, duration: 0.3, ease: 'power2.in' }, 0)
       .to(term, { left: cx, top: cy, duration: 0.3, ease: 'power2.out' }, 0.05)
-      .to(term, { left: 0, top: 0, width: vw, height: vh, borderRadius: 0, boxShadow: 'none', duration: 0.48, ease: 'power2.inOut' }, 0.32)
-      .to(['.term-bar', '.term-body'], { opacity: 0, duration: 0.2, ease: 'power1.in' }, 0.36)
+      // Fade terminal content out during the slide — terminal is a clean box before it expands
+      .to(['.term-bar', '.term-body'], { opacity: 0, duration: 0.18, ease: 'power2.in' }, 0.12)
+      .to(term, { left: 0, top: 0, width: vw, height: vh, boxShadow: 'none', duration: 0.48, ease: 'power2.inOut' }, 0.32)
       .to(term, { borderColor: 'transparent', duration: 0.16 }, 0.42)
       .to(overlay, { opacity: 1, duration: 0.14, ease: 'none' }, 0.72)
       .call(() => {
-        about.scrollIntoView({ behavior: 'instant' })
+        fwdTl = null
+        scrollTarget.scrollIntoView({ behavior: 'instant' })
+        // Clip terminal back to hero bounds so it can't bleed over the About viewport
+        hero.style.overflow = 'hidden'
         document.body.style.overflow = ''
         gsap.to(overlay, { opacity: 0, duration: 0.5, delay: 0.05, ease: 'power2.out', onComplete: setupReverseListener })
       })
@@ -251,14 +257,16 @@ function setupScrollAnimation() {
     revWheelHandler = (e) => {
       if (e.deltaY >= 0) return
       const delta = window.scrollY - snapY
-      if (delta > 400) {
-        window.removeEventListener('wheel', revWheelHandler)
+      // User scrolled far below About — abandon listener so normal scroll works
+      if (delta > 600) {
+        window.removeEventListener('wheel', revWheelHandler, { passive: false })
         revWheelHandler = null
         return
       }
-      if (delta <= 50) {
+      // Any upward scroll at or near the About top triggers reverse
+      if (delta <= 80) {
         e.preventDefault()
-        window.removeEventListener('wheel', revWheelHandler)
+        window.removeEventListener('wheel', revWheelHandler, { passive: false })
         revWheelHandler = null
         runReverseTransition()
       }
@@ -280,6 +288,8 @@ function setupScrollAnimation() {
 
     requestAnimationFrame(() => {
       window.scrollTo({ top: 0, behavior: 'instant' })
+      // Re-open overflow so border-radius is visible during the reverse shrink animation
+      hero.style.overflow = 'visible'
       document.body.style.overflow = ''
 
       gsap.timeline()
@@ -299,6 +309,7 @@ function setupScrollAnimation() {
         .to(heroKids, { opacity: 1, y: 0, stagger: { each: 0.055, from: 'end' }, duration: 0.5, ease: 'power2.out' }, 0.38)
         .to('.scroll-indicator', { opacity: 1, duration: 0.35 }, 0.75)
         .call(() => {
+          hero.style.overflow = 'hidden'
           gsap.set(term, { clearProps: 'position,left,top,width,height,margin,zIndex,borderRadius,boxShadow,borderColor,x,y' })
           active = false
           reversing = false
@@ -310,10 +321,22 @@ function setupScrollAnimation() {
 
   function resetHero() {
     if (reversing) return
+    if (fwdTl) { fwdTl.kill(); fwdTl = null }
+    // Fast scroll may have skipped the reverse animation — clean up its state too
+    if (revWheelHandler) {
+      window.removeEventListener('wheel', revWheelHandler, { passive: false })
+      revWheelHandler = null
+    }
+    gsap.killTweensOf(terminalEl.value)
     active = false
+    reversing = false
+    savedR = null
+    hero.style.overflow = 'hidden'
+    document.body.style.overflow = ''
+    gsap.set(overlay, { opacity: 0 })
     const term     = terminalEl.value
     const heroKids = Array.from(heroTextEl.value.children)
-    gsap.set(term, { clearProps: 'position,left,top,width,height,margin,zIndex,borderRadius,boxShadow,borderColor' })
+    gsap.set(term, { clearProps: 'position,left,top,width,height,margin,zIndex,borderRadius,boxShadow,borderColor,x,y' })
     gsap.set(['.hero-canvas', '.hex-grid', '.scan-line', '.hero-glow', '.scroll-indicator'], { clearProps: 'opacity' })
     gsap.set(heroKids, { clearProps: 'opacity,y' })
     gsap.set(['.term-bar', '.term-body'], { clearProps: 'opacity' })
@@ -442,6 +465,15 @@ onUnmounted(() => {
     radial-gradient(ellipse 100% 80% at 15% 85%, rgba(255,107,26,0.24) 0%, rgba(255,107,26,0.06) 40%, transparent 65%),
     radial-gradient(ellipse 60% 50% at 75% 10%, rgba(255,180,0,0.07) 0%, transparent 55%),
     var(--bg);
+}
+
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 220px;
+  background: linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-canvas {

@@ -70,7 +70,7 @@ const lineVisible = ref(false)
 
 const jobs = [
   {
-    company: 'LUV Team',
+    company: 'LUV TEAM CO., LTD.',
     role: 'Game Security Analyst',
     location: 'Retainer Contract',
     type: 'ACTIVE',
@@ -85,7 +85,7 @@ const jobs = [
     },
   },
   {
-    company: 'Cybertron Co., Ltd.',
+    company: 'Cybertron Co., LTD.',
     role: 'Cyber Security Analyst',
     location: 'Bangkok, Thailand',
     type: 'SOC',
