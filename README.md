@@ -89,6 +89,21 @@ A specialized desktop utility for runtime memory analysis, kernel-level interact
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top" colspan="2">
+
+### 💪 GymBroLog
+> *AI-Powered Fitness & Nutrition Tracker*
+
+A mobile-first app for logging workouts and nutrition, with an AI food scanner that estimates calories/protein from a photo. Available in English and Thai.
+
+- **Arch:** Vue 3 SPA + Hono API on Cloudflare Workers (serverless/edge)
+- **Stack:** `Vue 3` · `TypeScript` · `Hono` · `Supabase` · `Google Gemini`
+- **Focus:** AI food recognition · Workout & nutrition analytics · i18n (EN/TH)
+- **Live:** https://gymbrolog.pages.dev
+
+</td>
+</tr>
 </table>
 
 </div>

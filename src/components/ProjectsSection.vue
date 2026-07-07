@@ -107,6 +107,27 @@ const projects = [
       { val: '100%',   label: 'ONBOARDING RATE' },
     ],
   },
+  {
+    num: '03',
+    title: 'GymBroLog',
+    category: 'AI-Powered Fitness & Nutrition Tracking — Full-Stack',
+    role: 'Full-Stack Developer',
+    tech: ['Vue 3', 'Hono', 'Cloudflare Workers', 'Supabase', 'Google Gemini'],
+    links: [
+      { label: 'Live App', url: 'https://gymbrolog.pages.dev' },
+    ],
+    bullets: [
+      'Built a mobile-first Vue 3 SPA for workout & nutrition logging, with weekly routine templates, automatic PR detection, and workout-day streaks.',
+      'Shipped an AI food scanner using Google Gemini 2.5 Flash to estimate calories/protein from a photo, with per-user encrypted API keys.',
+      'Designed a serverless Hono API on Cloudflare Workers backed by Supabase (PostgreSQL + Auth), deployed on Cloudflare Pages/Workers free tier.',
+      'Localized the full app in English and Thai with a runtime language toggle.',
+    ],
+    stats: [
+      { val: '2',   label: 'LANGUAGES (EN/TH)' },
+      { val: 'AI',  label: 'FOOD RECOGNITION' },
+      { val: 'Edge', label: 'SERVERLESS API' },
+    ],
+  },
 ]
 
 onMounted(() => {
