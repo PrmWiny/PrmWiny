@@ -127,14 +127,14 @@ A mobile-first app for logging workouts and nutrition, with an AI food scanner t
 ```env
 LINKEDIN  = https://www.linkedin.com/in/poramade-winyunawan-2bbb00294/
 EMAIL     = poramade.winy@gmail.com
-PORTFOLIO = https://prm-winy.vercel.app
+PORTFOLIO = https://www.mxrch.dev/
 ```
 
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/poramade-winyunawan-2bbb00294/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:poramade.winy@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=white)](https://prm-winy.vercel.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=white)](https://www.mxrch.dev/)
 
 </div>
 
