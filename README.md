@@ -110,6 +110,26 @@ A mobile-first app for logging workouts and nutrition, with an AI food scanner t
 
 ---
 
+## 🥋 `[ CODEWARS OPERATIONS ]`
+
+<div align="center">
+  <a href="https://www.codewars.com/users/PrmWiny" target="_blank">
+    <img src="https://www.codewars.com/users/PrmWiny/badges/large" alt="Codewars Profile" />
+  </a>
+</div>
+
+### Completed Languages & Ranks
+
+| Language | Rank | Score | Katas Solved |
+| :--- | :--- | :--- | :--- |
+| **JavaScript** | `5 kyu` (Yellow) | `336` | `80+` |
+| **C#** | `7 kyu` (White) | `45` | `10+` |
+| **C** | `8 kyu` (White) | `3` | `1+` |
+
+*Total Completed Katas: 94*
+
+---
+
 ## 📡 `[ LIVE SYSTEM TELEMETRY ]`
 
 <div align="center">
@@ -128,6 +148,7 @@ A mobile-first app for logging workouts and nutrition, with an AI food scanner t
 LINKEDIN  = https://www.linkedin.com/in/poramade-winyunawan-2bbb00294/
 EMAIL     = poramade.winy@gmail.com
 PORTFOLIO = https://www.mxrch.dev/
+CODEWARS  = https://www.codewars.com/users/PrmWiny
 ```
 
 <div align="center">
@@ -135,6 +156,7 @@ PORTFOLIO = https://www.mxrch.dev/
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/poramade-winyunawan-2bbb00294/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:poramade.winy@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=white)](https://www.mxrch.dev/)
+[![Codewars](https://img.shields.io/badge/Codewars-B1361E?style=for-the-badge&logo=codewars&logoColor=white)](https://www.codewars.com/users/PrmWiny)
 
 </div>
 

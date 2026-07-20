@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <section id="about" class="section about-section">
     <div class="dot-grid" aria-hidden="true"></div>
     <div class="about-bg-orb" aria-hidden="true"></div>
@@ -28,7 +28,7 @@
             <span class="badge" v-for="pill in pills" :key="pill">{{ pill }}</span>
           </div>
           <div class="about-links">
-            <a href="mailto:poramade.winy@gmail.com" class="contact-link">
+            <a href="#" @click.prevent="openEmailModal" class="contact-link" title="Open contact terminal">
               <span class="contact-icon">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
               </span>
@@ -117,6 +117,10 @@ function animateCounters() {
       }
     }, iv)
   })
+}
+
+function openEmailModal() {
+  window.dispatchEvent(new CustomEvent('open-email-modal'))
 }
 
 onMounted(() => {

@@ -20,7 +20,7 @@
           </a>
         </li>
         <li>
-          <a href="mailto:poramade.winy@gmail.com" class="btn btn-outline nav-cta">Hire Me</a>
+          <a href="#" @click.prevent="openEmailModal" class="btn btn-outline nav-cta" title="Open contact terminal">Hire Me</a>
         </li>
       </ul>
 
@@ -49,6 +49,11 @@ const links = [
   { id: 'education', label: 'Education', num: '05.' },
   { id: 'contact', label: 'Contact', num: '06.' },
 ]
+
+function openEmailModal() {
+  menuOpen.value = false
+  window.dispatchEvent(new CustomEvent('open-email-modal'))
+}
 
 function onScroll() { scrolled.value = window.scrollY > 60 }
 

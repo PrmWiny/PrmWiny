@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div id="app-root">
     <div class="page-curtain" :class="{ lifted: pageLoaded }" aria-hidden="true"></div>
     <div class="scroll-bar" :style="{ transform: `scaleX(${scrollPct})` }" aria-hidden="true"></div>
@@ -26,6 +26,7 @@
         </div>
       </div>
     </footer>
+    <EmailModal />
   </div>
 </template>
 
@@ -39,6 +40,7 @@ import ExperienceSection from './components/ExperienceSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import EducationSection from './components/EducationSection.vue'
 import ContactSection from './components/ContactSection.vue'
+import EmailModal from './components/EmailModal.vue'
 
 const activeSection = ref('hero')
 const cursorDot = ref(null)

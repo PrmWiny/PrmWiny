@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <section id="contact" class="contact-section">
     <div class="contact-grid-bg" aria-hidden="true"></div>
     <div class="contact-orb o1" aria-hidden="true"></div>
@@ -20,8 +20,10 @@
 
         <div class="contact-btns reveal">
           <a
-            href="mailto:poramade.winy@gmail.com"
+            href="#"
+            @click.prevent="openEmailModal"
             class="btn btn-primary btn-email"
+            title="Open contact terminal"
           >
             &rarr; PORAMADE.WINY@GMAIL.COM
           </a>
@@ -60,6 +62,10 @@ const roles = [
   'Game Security Analyst',
   'DevSecOps Engineer',
 ]
+
+function openEmailModal() {
+  window.dispatchEvent(new CustomEvent('open-email-modal'))
+}
 
 onMounted(() => {
   const obs = new IntersectionObserver(([e]) => {
