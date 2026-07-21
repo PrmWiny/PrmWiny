@@ -100,7 +100,7 @@ A mobile-first app for logging workouts and nutrition, with an AI food scanner t
 - **Arch:** Vue 3 SPA + Hono API on Cloudflare Workers (serverless/edge)
 - **Stack:** `Vue 3` · `TypeScript` · `Hono` · `Supabase` · `Google Gemini`
 - **Focus:** AI food recognition · Workout & nutrition analytics · i18n (EN/TH)
-- **Live:** https://gymbrolog.pages.dev
+- **Live:** https://gymbro.mxrch.dev
 
 </td>
 </tr>
